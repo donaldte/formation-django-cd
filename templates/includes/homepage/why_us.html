@@ -1,0 +1,46 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+
+{% load widget_tweaks %}
+
+{% get_available_languages as languages %}
+  
+  
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+  
+          <div class="row">
+            <!-- <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150"> -->
+            <div class="col-lg-4" >
+              <div class="box">
+                <span>01</span>
+                <h4>{% trans 'Our goal ' %}</h4>
+                  <p>{% trans 'Make available to researchers, students, organizations and the public, algorithms for measuring technical efficiency, cost, income and profile ' %} 
+                  .</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 mt-4 mt-lg-0"  data-aos-delay="150">
+              <div class="box">
+                <span>02</span>
+                <h4>{% trans 'Who are we ' %}</h4>
+                <p>{% trans 'This digital platform is developed by the JINOO company and supported on a voluntary basis by a large number of researchers. We encourage researchers to share the results of their research work on measuring organizational efficiency. We also encourage them to share their difficulties and their needs in the implementation of techniques that are already the subject of a scientific publication. ' %}</p>
+              </div>
+            </div>
+  
+            <!-- <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up-right" data-aos-delay="300"> -->
+            <div class="col-lg-4 mt-4 mt-lg-0"  data-aos-delay="300">
+              <div class="box">
+                <span>03</span>
+                <h4> {% trans 'Target audience' %} Publics ciblés</h4>
+                <p>{% trans 'This digital platform is aimed primarily at the academic and scientific world. The algorithms are designed to implement efficiency analysis methods already published in scientific journals. Teachers, students and researchers are the main target. However, any consultant or person who has production data and/or prices can use this platform provided they have some idea of the concepts on which data envelopment analysis is based.' %} </p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Why Us Section -->
+  

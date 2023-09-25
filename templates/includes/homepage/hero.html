@@ -1,0 +1,20 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+
+{% load widget_tweaks %}
+
+{% get_available_languages as languages %}
+  
+  
+  <section id="hero" class="d-flex align-items-center">
+
+   <!--<div class="container position-relative" data-aos="fade-up" data-aos-delay="500">-->
+    <div class="container position-relative" data-aos-delay="500">
+      <h1 class="mb-5">{% trans 'Welcome to Easy-DEA' %}</h1>
+      <h2 >{% trans 'We develop this web applications to make easy implementation of organizational efficiency analyses. We wish through this tool, to popularize the use of data envelopment analysis methods.' %} </h2>
+      <a href="" class="btn-get-started scrollto mt-5">{% trans 'Start' %} </a>
+    </div>
+
+  </section>
+  

@@ -1,0 +1,29 @@
+{% extends "prep/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+
+{% block content %}
+
+  {% include "includes/homepage/hero.html" %}
+  <main id="main">
+    
+    {% include "includes/homepage/why_us.html" %}
+    {% include "includes/homepage/clients.html" %}
+    {% include "includes/homepage/cta.html" %}
+    {% include "includes/homepage/contact.html" %}
+  </main><!-- End #main -->
+{% endblock %}
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page_title }}</title>
+</head>
+<body>
+    <h1>{{ page_title }}</h1>
+    <p>{{ page_content }}</p>
+</body>
+</html>
+-->

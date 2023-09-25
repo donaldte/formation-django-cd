@@ -1,0 +1,18 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+{% spaceless %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'includes/_metas.html' %}
+</head>
+<body>
+{% block content %}
+
+{% endblock %}
+{% include 'includes/_jsfile.html' %}
+</body>
+</html>
+{% endspaceless %}

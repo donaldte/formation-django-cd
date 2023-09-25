@@ -1,0 +1,22 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+
+{% load widget_tweaks %}
+
+{% get_available_languages as languages %}
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <!-- <div class="container" data-aos="zoom-in"> -->
+        <div class="container" >
+  
+          <div class="text-center">
+            <h3>{% trans 'Call To Action ' %}</h3>
+            <p class="mt-5"> {% trans 'We invite all researchers working on linear optimization methods and efficiency analyzes to submit their collaboration needs. ' %} .</p>
+            <a class="cta-btn mt-5" href="#">{% trans ' Call To Action ' %}</a>
+          </div>
+  
+        </div>
+      </section><!-- End Cta Section -->
+  

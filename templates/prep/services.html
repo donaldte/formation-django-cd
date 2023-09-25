@@ -1,0 +1,85 @@
+{% extends "prep/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+
+{% block content %}
+
+  <main id="main">
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+  
+          <div class="section-title">
+            <span>{% trans 'Services ' %}</span>
+            <h2>{% trans 'Services ' %} </h2>
+            <p>{% trans 'We offer a wide range of support services to academics, researchers, students and organizations wishing to engage in organizational efficiency analysis and in particular those using data envelopment methods. Our experienced team is here to guide you every step of the way, providing personalized advice and solutions tailored to your needs. Here is an overview of the main services we offer: ' %} </p>
+          </div>
+  
+          <div class="row">
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up"> -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" >
+              <div class="icon-box">
+                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <h4><a href="">{% trans 'Platform ' %} </a></h4>
+                <p class="mb-5">{% trans 'Our platform is designed to offer a complete and intuitive experience to our users, providing them with a range of varied services. This service is designed to help you estimate efficiency scores and explain them through the estimation of overused inputs, under-produced outputs and market structure characterized by prices. This platform allows you to analyze technical efficiency, profit efficiency, cost efficiency, income efficiency, scale efficiency, allocative efficiency. We include the new DEA methods to allow you to implement your analyzes in the light of the evolution of science. ' %}</p>
+                <a href="" class="btn-get-started scrollto mt-5">{% trans 'Learn more ...' %} </a>
+            </div>
+            </div>
+  
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
+ -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"  data-aos-delay="150">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4><a href="">{% trans 'Build algorithms ' %}</a></h4>
+                <p>{% trans 'DEA methods come from linear programming techniques. Many new approaches are released every year. However, they remain theoretical and difficult to implement due to the lack of algorithms that should accompany theoretical discoveries. Our experts support you in the development of algorithms for the implementation of DEA methods that you wish to use when these are not yet implemented in the platform. ' %} </p>
+              </div>
+            </div>
+  
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300"> -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0"  data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4><a href="">{% trans 'Consultation' %}</a></h4>
+                <p>{% trans 'This service is focused on supporting organizations that wish to implement efficiency analysis processes. We understand that analysis can be a challenge, which is why we support you in developing special solutions more suited to your industry or the complexity of your organization when it has production units that use similar inputs to produce similar types of outputs. Our unique approach is to identify your problem, understand the structure of your organization and industry, formulate the analysis approach, develop the methods consistent with the mutually agreed upon approach, and assist you in the implementation. Thanks to this, we can help you reduce waste, reduce your costs, and increase your income.' %}</p>
+              </div>
+            </div>
+  
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450"> -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos-delay="450">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-world"></i></div>
+                <h4><a href="">{% trans 'Monitoring and evaluation' %}</a></h4>
+                <p>{% trans 'This service aims to help you integrate the results of data envelopment analyses into the monitoring and evaluation systems of organizational systems that manage comparable units.' %}</p>
+              </div>
+            </div>
+  
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="600"> -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"  data-aos-delay="600">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-slideshow"></i></div>
+                <h4><a href="">{% trans 'Design Dashboards' %}</a></h4>
+                <p>{% trans 'We design dashboards with the results of data envelopment analyses to make it easier for you to visualize these results and make decisions.' %}</p>
+              </div>
+            </div>
+  
+            <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="750"> -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"  data-aos-delay="750">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-arch"></i></div>
+                <h4><a href="">{% trans 'Other services' %}</a></h4>
+                <p>{% trans 'We also offer services related to the implementation of other efficiency analysis methods, such as stochastic frontier analysis and deterministic analysis.' %}</p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Services Section -->
+  
+
+    </main><!-- End #main -->
+    {% endblock %}

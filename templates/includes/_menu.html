@@ -1,0 +1,164 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+
+{% load widget_tweaks %}
+
+
+{% get_available_languages as languages %}
+ <!-- ======= Header ======= -->
+ <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- <h1 class="logo"><a href="index.html">Day</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a href="index.html" class="logo"><img src="{% static 'img/logo2.svg' %}"  width="129" height="74"  alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <!-- <li><a class="nav-link scrollto active" href="#hero">Acceuil</a> -->
+          <li><a class="nav-link scrollto" href="{% url 'home' %}"> {% trans 'Home' %}</a>          </li>
+          <li><a class="nav-link scrollto" href="{% url 'services' %}">{% trans 'Services' %}</a></li>
+          <li class="dropdown"><a href="model.html"><span>{% trans 'Models' %}</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              
+              <li class="dropdown"><a href="#"><span>{% trans 'Technical efficiency ' %}</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                    <li class="dropdown"><a href="#"><span>{% trans 'One period ' %}</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="#">{% trans 'Basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Alternate basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Intermediate ' %}</a></li>
+                            <li><a href="#">{% trans 'Advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'very advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'Networks ' %}</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>{% trans 'Multi period ' %}</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="#">{% trans 'Basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Alternate basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Intermediate ' %}</a></li>
+                            <li><a href="#">{% trans 'Advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'very advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'Networks ' %}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>{% trans 'Cost efficiency ' %} </span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                    <li class="dropdown"><a href="#"><span>{% trans 'One period ' %}</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="#">{% trans 'Basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Alternate basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Intermediate ' %}</a></li>
+                            <li><a href="#">{% trans 'Advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'very advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'Networks ' %}</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>{% trans 'Multi period ' %}</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="#">{% trans 'Basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Alternate basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Intermediate ' %}</a></li>
+                            <li><a href="#">{% trans 'Advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'very advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'Networks ' %}</a></li>
+                        </ul>
+                    </li>     </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>{% trans 'Income efficiency ' %} </span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                    <li class="dropdown"><a href="#"><span>{% trans 'One period ' %}</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="#">{% trans 'Basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Alternate basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Intermediate ' %}</a></li>
+                            <li><a href="#">{% trans 'Advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'very advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'Networks ' %}</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>{% trans 'Multi period ' %}</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="#">{% trans 'Basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Alternate basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Intermediate ' %}</a></li>
+                            <li><a href="#">{% trans 'Advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'very advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'Networks ' %}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>{% trans 'Profit efficiency ' %}</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                    <li class="dropdown"><a href="#"><span>{% trans 'One period ' %}</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="#">{% trans 'Basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Alternate basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Intermediate ' %}</a></li>
+                            <li><a href="#">{% trans 'Advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'very advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'Networks ' %}</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>{% trans 'Multi period ' %}</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="#">{% trans 'Basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Alternate basic ' %}</a></li>
+                            <li><a href="#">{% trans 'Intermediate ' %}</a></li>
+                            <li><a href="#">{% trans 'Advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'very advanced ' %}</a></li>
+                            <li><a href="#">{% trans 'Networks ' %}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+              <li><a href="#">{% trans 'Productivity index' %} </a></li>
+            </ul>
+          </li>
+          <!-- <li><a class="nav-link scrollto " href="#portfolio">portefeuilles</a>-->
+          </li>
+
+          <li class="dropdown"><a href="#"><span>{% trans 'Applications' %}</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                <li class="dropdown"><a href="#"><span>{% trans 'Publications ' %}</span><i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                        <li><a href="#">{% trans 'Bank and Insurance ' %}</a></li>
+                        <li><a href="#">{% trans 'Health and healthcare ' %}</a></li>
+                        <li><a href="#">{% trans 'Transport ' %}</a></li>
+                        <li><a href="#">{% trans 'Other sectors ' %}</a></li>
+                    </ul>
+                </li>                
+                <li class="dropdown"><a href="#"><span>{% trans 'Our Examples ' %}</span><i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                        <li><a href="#">{% trans 'Technical efficiency ' %}</a></li>
+                        <li><a href="#">{% trans 'Cost efficiency ' %}</a></li>
+                        <li><a href="#">{% trans 'Income efficiency ' %}</a></li>
+                        <li><a href="#">{% trans 'Profit efficiency ' %}</a></li>
+                        <li><a href="#">{% trans 'Productivity index' %}</a></li>
+                    </ul>
+                </li> 
+            </ul>            
+          </li> 
+          
+            <li class="dropdown"><a href=""><span>{% trans 'Ressources' %}</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    <li><a href="#">{% trans 'Documentation & tools ' %}</a></li>
+                    <li><a href="#">{% trans 'Events ' %}</a></li>
+                    <li><a href="#">{% trans 'Videos ' %}</a></li>
+                </ul>
+            </li> 
+            <li><a class="nav-link scrollto" href="">{% trans 'Price' %}</a></li>
+            <li><a class="nav-link scrollto" href="">{% trans 'News' %}</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'contact-us' %}">{% trans 'Contact' %}</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->

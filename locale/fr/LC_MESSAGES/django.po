@@ -1,0 +1,367 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-17 02:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: easy_dea/settings.py:145
+msgid "English"
+msgstr "Anglais"
+
+#: easy_dea/settings.py:146
+msgid "French"
+msgstr "Français"
+
+#: easy_dea/settings.py:152 easy_dea/settings.py:153
+msgid "Efficiency evaluation"
+msgstr "Évaluation de l'efficacité"
+
+#: templates/includes/_footer.html:21
+msgid ""
+"Easy-dea is a digital platform developed by Jinoo, Inc. to popularize "
+"efficiency analysis"
+msgstr ""
+"Easy-dea est une plateforme numérique développée par Jinoo, Inc. pour "
+"populariser l'analyse de l'efficacité"
+
+#: templates/includes/_footer.html:26
+msgid "Telephon"
+msgstr "Téléphone"
+
+#: templates/includes/_footer.html:41
+msgid "Useful Links"
+msgstr "Liens utiles"
+
+#: templates/includes/_footer.html:43 templates/includes/_menu.html:21
+msgid "Home"
+msgstr "Acceuil"
+
+#: templates/includes/_footer.html:44
+msgid "Term of use"
+msgstr "Conditions d'utilisation"
+
+#: templates/includes/_footer.html:45
+msgid "Confidentiality policy"
+msgstr "Politique de confidentialité"
+
+#: templates/includes/_footer.html:46
+msgid "Property rights"
+msgstr "Droits de propriété"
+
+#: templates/includes/_footer.html:47
+msgid "Regulatory Affairs"
+msgstr "Affaires réglementaires"
+
+#: templates/includes/_footer.html:48
+msgid "Professional code of conduct"
+msgstr "Code de déontologie professionnelle"
+
+#: templates/includes/_footer.html:49
+msgid "Cookies settings"
+msgstr "Paramètres des cookies"
+
+#: templates/includes/_footer.html:54 templates/includes/_footer.html:57
+#: templates/includes/homepage/contact.html:14
+msgid "Contact us"
+msgstr "Contactez-nous"
+
+#: templates/includes/_footer.html:56
+msgid "Assistance and help"
+msgstr "Assistance et aide"
+
+#: templates/includes/_footer.html:58
+msgid "Complaints"
+msgstr "Plaintes"
+
+#: templates/includes/_footer.html:59
+msgid "Feedback"
+msgstr ""
+
+#: templates/includes/_footer.html:64
+msgid "Our newsletter"
+msgstr "Notre bulletin"
+
+#: templates/includes/_footer.html:65
+msgid ""
+"Subscribe to our newsletter to stay up to date with all the advances in the "
+"field of organizational efficiency analysis."
+msgstr ""
+"Souscrire à notre infolettre pour rester au courant de toutes les avancées "
+"dans le domaine de l'analyse de l'efficience des organisations."
+
+#: templates/includes/_footer.html:78
+msgid "All Rights Reserved"
+msgstr "Tous droits réservés"
+
+#: templates/includes/_footer.html:85
+msgid "Designed by"
+msgstr "Conçu par"
+
+#: templates/includes/_header.html:26
+msgid "Sign In"
+msgstr "Se connecter"
+
+#: templates/includes/_menu.html:22
+msgid "Services"
+msgstr "Services"
+
+#: templates/includes/_menu.html:23
+msgid "Models"
+msgstr "Modèles"
+
+#: templates/includes/_menu.html:26 templates/includes/_menu.html:139
+msgid "Technical efficiency "
+msgstr "Efficience technique"
+
+#: templates/includes/_menu.html:28 templates/includes/_menu.html:52
+#: templates/includes/_menu.html:75 templates/includes/_menu.html:99
+msgid "One period "
+msgstr "Une période"
+
+#: templates/includes/_menu.html:30 templates/includes/_menu.html:40
+#: templates/includes/_menu.html:54 templates/includes/_menu.html:64
+#: templates/includes/_menu.html:77 templates/includes/_menu.html:87
+#: templates/includes/_menu.html:101 templates/includes/_menu.html:111
+msgid "Basic "
+msgstr "Basique"
+
+#: templates/includes/_menu.html:31 templates/includes/_menu.html:41
+#: templates/includes/_menu.html:55 templates/includes/_menu.html:65
+#: templates/includes/_menu.html:78 templates/includes/_menu.html:88
+#: templates/includes/_menu.html:102 templates/includes/_menu.html:112
+msgid "Alternate basic "
+msgstr "Basique alternatif"
+
+#: templates/includes/_menu.html:32 templates/includes/_menu.html:42
+#: templates/includes/_menu.html:56 templates/includes/_menu.html:66
+#: templates/includes/_menu.html:79 templates/includes/_menu.html:89
+#: templates/includes/_menu.html:103 templates/includes/_menu.html:113
+msgid "Intermediate "
+msgstr "Intermédiaire"
+
+#: templates/includes/_menu.html:33 templates/includes/_menu.html:43
+#: templates/includes/_menu.html:57 templates/includes/_menu.html:67
+#: templates/includes/_menu.html:80 templates/includes/_menu.html:90
+#: templates/includes/_menu.html:104 templates/includes/_menu.html:114
+msgid "Advanced "
+msgstr "Avancée"
+
+#: templates/includes/_menu.html:34 templates/includes/_menu.html:44
+#: templates/includes/_menu.html:58 templates/includes/_menu.html:68
+#: templates/includes/_menu.html:81 templates/includes/_menu.html:91
+#: templates/includes/_menu.html:105 templates/includes/_menu.html:115
+msgid "very advanced "
+msgstr "très avancée"
+
+#: templates/includes/_menu.html:35 templates/includes/_menu.html:45
+#: templates/includes/_menu.html:59 templates/includes/_menu.html:69
+#: templates/includes/_menu.html:82 templates/includes/_menu.html:92
+#: templates/includes/_menu.html:106 templates/includes/_menu.html:116
+msgid "Networks "
+msgstr "Réseaux"
+
+#: templates/includes/_menu.html:38 templates/includes/_menu.html:62
+#: templates/includes/_menu.html:85 templates/includes/_menu.html:109
+msgid "Multi period "
+msgstr "Multiple période"
+
+#: templates/includes/_menu.html:50 templates/includes/_menu.html:140
+msgid "Cost efficiency "
+msgstr "Éfficience coût"
+
+#: templates/includes/_menu.html:73 templates/includes/_menu.html:141
+msgid "Income efficiency "
+msgstr "Éfficience revenu"
+
+#: templates/includes/_menu.html:97 templates/includes/_menu.html:142
+msgid "Profit efficiency "
+msgstr "Éfficience profit"
+
+#: templates/includes/_menu.html:121 templates/includes/_menu.html:143
+msgid "Productivity index"
+msgstr "Index de productivité"
+
+#: templates/includes/_menu.html:127
+msgid "Applications"
+msgstr "Applications"
+
+#: templates/includes/_menu.html:129
+msgid "Publications "
+msgstr "Publications"
+
+#: templates/includes/_menu.html:131
+msgid "Bank and Insurance "
+msgstr "Banque et assurance"
+
+#: templates/includes/_menu.html:132
+msgid "Health and healthcare "
+msgstr "Santé et soins de santé"
+
+#: templates/includes/_menu.html:133
+msgid "Transport "
+msgstr "Transport"
+
+#: templates/includes/_menu.html:134
+msgid "Other sectors "
+msgstr "Autres secteurs"
+
+#: templates/includes/_menu.html:137
+msgid "Our Examples "
+msgstr "Nos exemples"
+
+#: templates/includes/_menu.html:149
+msgid "Ressources"
+msgstr "Ressources"
+
+#: templates/includes/_menu.html:151
+msgid "Documentation & tools "
+msgstr "Documentation & outils"
+
+#: templates/includes/_menu.html:152
+msgid "Events "
+msgstr "Événements"
+
+#: templates/includes/_menu.html:153
+msgid "Videos "
+msgstr "Vidéos"
+
+#: templates/includes/_menu.html:156
+msgid "Price"
+msgstr "Prix"
+
+#: templates/includes/_menu.html:157
+msgid "News"
+msgstr "Actualités"
+
+#: templates/includes/homepage/clients.html:14
+msgid "Our clients"
+msgstr "Nos clients"
+
+#: templates/includes/homepage/contact.html:13
+msgid "Contact us "
+msgstr "Contactez-nous"
+
+#: templates/includes/homepage/contact.html:15
+msgid "For more information, please contact us. "
+msgstr "Pour plus d'informations, contactez nous."
+
+#: templates/includes/homepage/contact.html:23
+msgid "Our adress "
+msgstr "Notre adresse"
+
+#: templates/includes/homepage/contact.html:31
+msgid "Our email "
+msgstr "Notre email"
+
+#: templates/includes/homepage/contact.html:39
+msgid "Call us "
+msgstr "Appeller nous"
+
+#: templates/includes/homepage/contact.html:57
+msgid "Your name "
+msgstr "Votre nom"
+
+#: templates/includes/homepage/contact.html:60
+msgid "Your mail "
+msgstr "Votre email"
+
+#: templates/includes/homepage/contact.html:64
+msgid "Subject"
+msgstr "Sujet"
+
+#: templates/includes/homepage/contact.html:67
+msgid "Your message"
+msgstr "Votre message"
+
+#: templates/includes/homepage/contact.html:72
+msgid "Your message has been sent. Thanks! "
+msgstr "Votre message a été envoyé. Merci!"
+
+#: templates/includes/homepage/contact.html:74
+msgid "Send your Message "
+msgstr "Envoyez votre message"
+
+#: templates/includes/homepage/cta.html:15
+msgid "Call To Action "
+msgstr "Appel à l'action"
+
+#: templates/includes/homepage/cta.html:16
+msgid ""
+"We invite all researchers working on linear optimization methods and "
+"efficiency analyzes to submit their collaboration needs. "
+msgstr "Nous invitons tous les chercheurs travaillant sur les méthodes d'optimisation linéaire et l'analyse d'efficience à soumettre leurs besoins de collaboration."
+
+#: templates/includes/homepage/cta.html:17
+msgid " Call To Action "
+msgstr "Appel à l'action"
+
+#: templates/includes/homepage/hero.html:14
+msgid "Welcome to Easy-DEA"
+msgstr "Bienvenu sur Easy-DEA"
+
+#: templates/includes/homepage/hero.html:15
+msgid ""
+"We develop this web applications to make easy implementation of "
+"organizational efficiency analyses. We wish through this tool, to popularize "
+"the use of data envelopment analysis methods."
+msgstr ""
+"Nous développons cette application web pour faciliter la "
+"mise en oeuvre des analyses d'efficience organisationnelle. Nous souhaitons "
+"à travers cet outil, vulgariser l'usage des méthodes d'analyse "
+"d'enveloppement des données."
+
+#: templates/includes/homepage/hero.html:16
+msgid "Start"
+msgstr "Commencer"
+
+#: templates/includes/homepage/why_us.html:19
+msgid "Our goal "
+msgstr "Notre but"
+
+#: templates/includes/homepage/why_us.html:20
+msgid ""
+"Make available to researchers, students, organizations and the public, "
+"algorithms for measuring technical efficiency, cost, income and profile "
+msgstr "Mettre à la disposition des chercheurs, des étudiants, des organisations et du public, des algorithmes de mesure d'efficacité technique, de coût, de revenu et de profil."
+
+#: templates/includes/homepage/why_us.html:28
+msgid "Who are we "
+msgstr "Qui sommes nous"
+
+#: templates/includes/homepage/why_us.html:29
+msgid ""
+"This digital platform is developed by the JINOO company and supported on a "
+"voluntary basis by a large number of researchers. We encourage researchers "
+"to share the results of their research work on measuring organizational "
+"efficiency. We also encourage them to share their difficulties and their "
+"needs in the implementation of techniques that are already the subject of a "
+"scientific publication. "
+msgstr "Cette plateforme numérique est développée par la société JINOO et soutenue sur la base du volontariat par un grand nombre de chercheurs. Nous encourageons les chercheurs à partager les résultats de leurs travaux de recherche sur la mesure de l'efficacité organisationnelle. Nous les encourageons également à partager leurs difficultés et leurs besoins dans la mise en œuvre de techniques qui font déjà l'objet d'une publication scientifique."
+
+#: templates/includes/homepage/why_us.html:37
+msgid "Target audience"
+msgstr "Publics ciblés"
+
+#: templates/includes/homepage/why_us.html:38
+msgid ""
+"This digital platform is aimed primarily at the academic and scientific "
+"world. The algorithms are designed to implement efficiency analysis methods "
+"already published in scientific journals. Teachers, students and researchers "
+"are the main target. However, any consultant or person who has production "
+"data and/or prices can use this platform provided they have some idea of the "
+"concepts on which data envelopment analysis is based."
+msgstr "Cette plateforme numérique s'adresse en priorité au monde académique et scientifique. Les algorithmes sont conçus pour mettre en œuvre des méthodes d'analyse d'efficacité déjà publiées dans des revues scientifiques. Les enseignants, les étudiants et les chercheurs sont la cible principale. Cependant, tout consultant ou personne disposant de données de production et/ou de prix peut utiliser cette plateforme à condition d'avoir une idée des concepts sur lesquels repose l'analyse de l'enveloppement des données."

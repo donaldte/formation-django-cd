@@ -1,0 +1,91 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+<!-- footer start -->
+
+  
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+
+              <a href="" class="logo"><img src="{% static 'img/logo2.svg' %}"  width="129" height="74" alt="" class="img-fluid"></a>
+              
+              <!--<h3>Easy-DEA</h3>-->
+              <p class="mt-3">
+                <strong>{% trans 'Easy-dea is a digital platform developed by Jinoo, Inc. to popularize efficiency analysis' %}</strong>
+              </p> 
+              <p class="mt-3">
+                1072 Abbott Street,Milton, ON L9T5P4<br>
+                Canada <br><br>
+                <strong>{% trans 'Telephon' %}:</strong> {{ site.contact_number }}<br>
+                <strong>Email:</strong> {{ site.support_email|default_if_none:'contact@jinoo.ca' }}<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="{{ site.twitter_url }}" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="{{ site.facebook_url }}" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="{{ site.instagram_url }}" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="{{ site.linkedin_url }}" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="{{ site.linkedin_url }}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="{{ site.youtube_url }}" class="youtube"><i class="bx bxl-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>{% trans 'Useful Links' %}</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'term-of-use' %}">{% trans 'Term of use' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacy-policy' %}">{% trans 'Confidentiality policy' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'term-of-use' %}">{% trans 'Property rights' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'term-of-use' %}">{% trans 'Regulatory Affairs' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'term-of-use' %}">{% trans 'Professional code of conduct' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'term-of-use' %}">{% trans 'Cookies settings' %}</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>{% trans 'Contact us' %}</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'support' %}">{% trans 'Assistance and help' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact-us' %}">{% trans 'Contact us' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'complaints' %}">{% trans 'Complaints' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'feedback' %}">{% trans 'Feedback' %}</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>{% trans 'Our newsletter' %} </h4>
+            <p>{% trans 'Subscribe to our newsletter to stay up to date with all the advances in the field of organizational efficiency analysis.' %}</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Jinoo Inc</span></strong>. {% trans 'All Rights Reserved' %} 
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+        {% trans 'Designed by' %}  <a href="https://bootstrapmade.com/">Jinoo Inc</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!--<div id="preloader"></div> -->
