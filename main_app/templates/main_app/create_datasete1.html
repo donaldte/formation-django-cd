@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+
+    <h1>Create a new Dateset</h1>
+    {% if messages %}
+
+        {% for message in messages %}
+
+        <p style="color: green"> {{ message }}</p>
+
+        {% endfor %}
+
+    {% endif %}
+
+
+    <form  method="post">
+
+        {% csrf_token %}
+
+        <input type="text" placeholder="Enter your file 's name here" name='name'>
+<br>
+        <textarea name='description' rows='10', cols='100'>
+        </textarea>
+<br>
+        <input type="submit" value="Create">
+
+    </form>
+    
+</body>
+</html>

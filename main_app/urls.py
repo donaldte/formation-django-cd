@@ -1,5 +1,5 @@
 from django.urls import path
-
+from .views import create_datesete, DataSetCreationView
 from main_app.custom_views.accounts import (
     RegisterView,
     SignupView,
@@ -19,9 +19,11 @@ from main_app.custom_views.commons import (
 
 )
 
+app_name = 'main_app'
+
 urlpatterns = [
     path("", HomePageView.as_view(), name="home"),
-       path('about-us/', AboutView.as_view(), name='about-us'),
+    path('about-us/', AboutView.as_view(), name='about-us'),
     path("term-of-use", TermOfUseView.as_view(), name="term-of-use"),
     path("privacy-policy", PrivacyPolicyView.as_view(), name="privacy-policy"),
     path("support", SupportView.as_view(), name="support"),
@@ -32,4 +34,7 @@ urlpatterns = [
     
     path("sign-up", SignupView.as_view(), name="sign-up"),
     path("register", RegisterView.as_view(), name="register"),
+    
+    path('create-dataset/', create_datesete, name='create-dataset'),
+   # path('create-dataset/', DataSetCreationView.as_view(), name='create-dataset'),
 ]

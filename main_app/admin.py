@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import DataTest
 
-# Register your models here.
+# admin.site.register(DataTest)
+
+@admin.register(DataTest)
+class DataSetAdimin(admin.ModelAdmin):
+    list_display = ['name', 'description', 'create_at',]
+
+
