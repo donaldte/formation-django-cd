@@ -1,0 +1,4 @@
+venv
+db.sqlite3
+.env # this is where you store your secret keys
+media 
