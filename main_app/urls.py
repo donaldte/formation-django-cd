@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import create_datesete, DataSetCreationView
+from .views import create_datesete, DataSetCreationView, modify_dataset, list_dataset, delete_dataset
 from main_app.custom_views.accounts import (
     RegisterView,
     SignupView,
@@ -36,5 +36,9 @@ urlpatterns = [
     path("register", RegisterView.as_view(), name="register"),
     
     path('create-dataset/', create_datesete, name='create-dataset'),
+    path('modify-dataset/<int:pk>/', modify_dataset, name='modify-data'),
+    path('delete-dataset/<int:pk>/', delete_dataset, name='delete-data'),
+    path('list-dataset/', list_dataset, name='list-dataset')
+    
    # path('create-dataset/', DataSetCreationView.as_view(), name='create-dataset'),
 ]

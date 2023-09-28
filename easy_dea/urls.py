@@ -26,8 +26,8 @@ from django.urls import include, path
 
 urlpatterns = i18n_patterns(
     path("admin/", admin.site.urls),
-    path("", include("main_app.urls")),
-
+    path("main_app/", include("main_app.urls")),
+    
 )
 
 urlpatterns += staticfiles_urlpatterns()

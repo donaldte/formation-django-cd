@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+
+    <h1>List Dateset</h1>
+    {% if messages %}
+
+        {% for message in messages %}
+
+        <p style="color: green"> {{ message }}</p>
+
+        {% endfor %}
+
+    {% endif %}
+
+
+    {% if data %}
+        <table border='1'>
+            <th>id</th>
+            <th>name</th>
+            <th>description</th>
+            <th>created_at</th>
+            <th>Action</th>
+
+            {% for item in data %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>{{ item.create_at }}</td>
+                    <td>
+                        {% comment %} <a href="{% url 'main_app:modify-dataset' item.id %}">Edit</a> {% endcomment %}
+                        <a href="{{ item.get_absolute_url_update }}">Edit</a>
+                        <a href="{{ item.get_absolute_url_delete }}">Delete</a>
+                    </td>    
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>no data</p>
+    {% endif %}    
+    
+</body>
+</html>

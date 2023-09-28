@@ -3,7 +3,7 @@ from typing import Any, Dict
 from django.conf import settings
 
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
 from django.views.generic.base import TemplateView
 
@@ -64,6 +64,65 @@ def create_datesete(request, *args, **kwargs):
              
     
     return render(request, 'main_app/create_datasete1.html') 
+
+
+def modify_dataset(request,*args, **kwargs):
+    pk = kwargs.get('pk')
+    try:
+        if pk != None:
+            form = DataTestForm()
+            data = DataTest.objects.get(pk=pk)
+            #data = get_object_or_404(DataTest, pk=pk)
+            form = DataTestForm(instance=data)
+            if request.method == 'POST':
+                form = DataTestForm(request.POST, instance=data)
+                if form.is_valid():
+                    form.save()
+                    messages.success(request, "Dataset saved successfully modified.")
+                    return redirect('main_app:list-dataset')
+                else:
+                    messages.error(request, "There is an error with your data!")
+                    return render(request, 'main_app/modify_dataset.html', {'form': form})
+                return render(request, 'main_app/modify_dataset.html', {'form': form})
+    except Exception as e:
+        messages.error(request, "Dataset not found.")
+        return render(request, 'main_app/modify_dataset.html', {'form': form})  
+          
+    return render(request, 'main_app/modify_dataset.html', {'form': form})
+
+
+
+def delete_dataset(request, *args, **kwargs):
+    pk = kwargs.get('pk')
+    try: 
+        if pk != None:
+            data = DataTest.objects.get(pk=pk)
+            data.is_deleted = True
+            data.save()
+            messages.success(request, "Dataset deleted successfully.")
+            return redirect('main_app:list-dataset')
+    except Exception as e:
+        messages.error(request, "Dataset not found.")
+        return redirect('main_app:list-dataset')
+    
+
+
+
+def list_dataset(request, *args, **kwargs):
+    try:
+        data = DataTest.objects.filter(is_deleted=False)
+    except Exception as e:
+        messages.error(request, "Dataset empty.")
+        return render(request, 'main_app/list_dataset.html', {'data': data})  
+          
+    return render(request, 'main_app/list_dataset.html', {'data': data})
+
+
+def list_data(request, cls, template_name, *args, **kwargs):
+    data = cls.objects.all()
+    return render(request, template_name, {'data': data})
+
+
 
 class DataSetCreationView(View):
     
