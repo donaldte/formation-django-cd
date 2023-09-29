@@ -25,7 +25,7 @@ from django.urls import include, path
 ## about/fr
 
 urlpatterns = i18n_patterns(
-    path("admin/", admin.site.urls),
+    path("easy-dea-admin/", admin.site.urls),
     path("main_app/", include("main_app.urls")),
     
 )

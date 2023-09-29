@@ -37,6 +37,7 @@ INSTALLED_APPS = [
 # third party applications
     'formtools',
     'widget_tweaks',
+    'import_export',
 
 # my applications
     'main_app',
