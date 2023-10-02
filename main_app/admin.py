@@ -1,9 +1,14 @@
 from django.contrib import admin
+
 from .models import DataTest, Profile, Utilisateur, Course, Lecon, Taches
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
 # admin.site.register(DataTest)
+
+admin.site.site_header = "DEA ADMIN"
+admin.site.site_title = 'DEA ADMIN'
+admin.site.index_title = 'DEA ADMIN'
 
 class DataTestResource(resources.ModelResource):
     class Meta:
@@ -38,4 +43,8 @@ class LeconAdmin(admin.ModelAdmin):
     
 @admin.register(Taches)
 class TachesAdmin(admin.ModelAdmin):
-    list_display = ['name', 'description', 'create_at', 'is_deleted',]                
+    list_display = ['name', 'description', 'create_at', 'is_deleted',]   
+    search_fields = ['name', 'description', 'is_deleted']  
+    list_editable = [ 'is_deleted']    
+    list_filter = ['name', 'description', 'is_deleted'] 
+    list_display_links = ['create_at']      

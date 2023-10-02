@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<h1> Login Here </h1>
+
+{% if messages %}
+
+        {% for message in messages %}
+
+        <p style="color: green"> {{ message }}</p>
+
+        {% endfor %}
+
+{% endif %}
+
+<body>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        <label id="username"> username </label>
+
+        <input for="username" type="text"  name="username" placeholder="enter your username">
+
+        <label id="password1"> password </label>
+        <input for="password1" type="password" name="password" placeholder="enter your password1">
+
+
+
+         
+        <button type="submit"> login </button>
+
+    </form>
+    
+</body>
+</html>

@@ -27,6 +27,7 @@ from django.urls import include, path
 urlpatterns = i18n_patterns(
     path("easy-dea-admin/", admin.site.urls),
     path("main_app/", include("main_app.urls")),
+    path('compte/', include('compte.urls'))
     
 )
 

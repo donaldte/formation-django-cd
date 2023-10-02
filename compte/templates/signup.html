@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register </title>
+</head>
+
+<h1> Register here </h1>
+
+{% if messages %}
+
+        {% for message in messages %}
+
+        <p style="color: green"> {{ message }}</p>
+
+        {% endfor %}
+
+{% endif %}
+
+
+<body>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        <label id="username"> username </label>
+        <input for="username" type="text"  name="username" placeholder="enter your username">
+<br><br>
+
+        <label id="email"> Email </label>
+        <input for="email" type="email"  name="email" placeholder="enter your email">
+        <br><br>
+
+
+        <label id="first-name"> First name </label>
+        <input for="first-name" type="text" name="first_name" placeholder="enter your firstn ame">
+        <br>
+        <br>
+
+        <label id="last-name"> Last name </label>
+        <input for="last-name" type="text" name="last_name" placeholder="enter your last name">
+        <br><br>
+
+
+        <label id="password1"> password </label>
+        <input for="password1" type="password" name="password1" placeholder="enter your password1">
+        <br><br>
+
+
+
+        <label id="password2"> confirm password </label>
+        <input for="password2" type="password" name="password2" placeholder="enter your password2">
+
+        <br><br>
+
+
+        <button type="submit"> create </button>
+
+    </form>
+    
+</body>
+</html>
