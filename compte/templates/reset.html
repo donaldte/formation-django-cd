@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register </title>
+</head>
+
+<h1> Email to reset password </h1>
+
+{% if messages %}
+
+        {% for message in messages %}
+
+        <p style="color: green"> {{ message }}</p>
+
+        {% endfor %}
+
+{% endif %}
+
+
+<body>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+       
+        <label id="email"> email </label>
+        <input for="email" type="email" name="email" placeholder="enter your email address">
+        <br><br>
+
+
+
+       
+
+        <button type="submit"> reset now </button>
+
+    </form>
+    
+</body>
+</html>

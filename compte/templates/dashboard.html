@@ -1,0 +1,14 @@
+
+
+{% if request.user.is_staff%}
+
+<a>Staff</a>
+
+{% elif request.user.is_or %}
+
+<a>OR</a>
+
+{% elif request.user.is_ee %}
+
+
+{%  endif %}

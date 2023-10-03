@@ -17,6 +17,8 @@ from main_app.models import DataTest
 
 from .forms import DataTesFormWithoutModel, DataTestForm
 
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def hello(request):
@@ -47,7 +49,7 @@ class MyView(View):
     
 #     return render(request, 'main_app/create_datesete.html', context) 
 
-
+@login_required()
 def create_datesete(request, *args, **kwargs):
     
    
@@ -124,7 +126,7 @@ def list_data(request, cls, template_name, *args, **kwargs):
 
 
 
-class DataSetCreationView(View):
+class DataSetCreationView(LoginRequiredMixin, View):
     
     template_name = 'main_app/create_datesete.html'
     form = DataTesFormWithoutModel()

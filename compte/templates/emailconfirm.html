@@ -1,0 +1,10 @@
+{% autoescape off %}
+
+
+welcome to DEA
+
+Please confirm your email by clicking on the link below 
+
+confirm link: http//{{domain}}{% url 'compte:activate' uid64=uid token=token  %}
+
+{% endautoescape %}
