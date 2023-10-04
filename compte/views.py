@@ -162,11 +162,8 @@ def login_view(request):
                         if next:
                             return redirect(next)
                         else:
-                            if user.is_staff:
-                                return redirect('admin:index')
-                            elif user.is_organization:
-                                
-                        
+                            return redirect('dashboard:dashboard')
+                                   
                     else:
                         messages.info(request, 'Sorry you didn\'t confirm your account')    
                 

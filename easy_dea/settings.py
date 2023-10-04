@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 # my applications
     'main_app',
     'compte',
+    'dashboard',
 ]
 
 MIDDLEWARE = [

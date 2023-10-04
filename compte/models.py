@@ -3,7 +3,7 @@ import logging
 import uuid
 # django
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.core.mail import send_mail
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -28,12 +28,11 @@ class BaseModel(TimeStampedModel, ActivatorModel):
     metadata = models.JSONField(default=dict, null=True, blank=True)
     
    
-
     class Meta:
         abstract = True
 
 
-class User(AbstractBaseUser):
+class User(AbstractBaseUser, PermissionsMixin):
     """
         Name: User
 
@@ -66,6 +65,11 @@ class User(AbstractBaseUser):
                                            "explicitly assigning them."
                                        ))
     
+    # is_permium = models.BooleanField(_("permium status"), default=False)
+    # is_basic = models.BooleanField(_("basic status"), default=False)
+    # is_professional = models.BooleanField(_("professional status"), default=False)
+    # is_advanced = models.BooleanField(_("advanced status"), default=False)
+    
     is_organization = models.BooleanField(_("organization status"), default=False)
     
     is_student = models.BooleanField(_("student status"), default=False)
@@ -89,18 +93,18 @@ class User(AbstractBaseUser):
         verbose_name = _('User')
         verbose_name_plural = _('User')
 
-    def has_perm(self, perm, obj=None):
-        """Does the user have a specific permission?"""
-        # Simplest possible answer: Yes, always
-        return True
+    # def has_perm(self, perm, obj=None):
+    #     """Does the user have a specific permission?"""
+    #     # Simplest possible answer: Yes, always
+    #     return True
 
-    def has_module_perms(self, app_label):
-        "Does the user have permissions to view the app `app_label`?"
-        # Simplest possible answer: Yes, always
-        return True
+    # def has_module_perms(self, app_label):
+    #     "Does the user have permissions to view the app `app_label`?"
+    #     # Simplest possible answer: Yes, always
+    #     return True
 
-    def has_perms(self, perm_list: list, obj=None):
-        return True
+    # def has_perms(self, perm_list: list, obj=None):
+    #     return True
 
     def clean(self):
         super().clean()
@@ -168,6 +172,8 @@ class Student(BaseModel):
     #organization = models.ForeignKey(Organization, on_delete=models.CASCADE, null=True, blank=True)  
     
     
+    
+    
 class Professor(BaseModel):
     """ 
     Name: 
@@ -176,7 +182,64 @@ class Professor(BaseModel):
     
     name = models.CharField(max_length=100, null=False, blank=False)
     #organization = models.ForeignKey(Organization, on_delete=models.CASCADE, null=True, blank=True)    
+
+
+class Plan(BaseModel):
+    name = models.CharField(max_length=100)
+    description = models.TextField(null=True, blank=True)
+    price = models.FloatField(null=False, blank=False)
     
+    
+    def __str__(self) -> str:
+        return self.name
+
+    
+class SubcribePlam(BaseModel):
+    """
+    Name: SubcribePlam
+
+    Description: This class help to create a subcribe plam.
+    
+    Author: 
+    """
+     
+    
+    plan = models.ForeignKey(Plan, on_delete=models.PROTECT, null=False, blank=False)
+    user = models.ForeignKey(User, on_delete=models.PROTECT, null=True, blank=True)
+    payment_mode = models.CharField(max_length=100, null=False, blank=False)
+    start_date = models.DateField(null=False, blank=False)
+    end_date = models.DateField(null=False, blank=False)
+    still_valid = models.BooleanField(default=True)
+    
+    
+    def still_valid(self):
+       return  self.end_date > timezone.now()
+    
+    
+    def __str__(self) -> str:
+        return self.user.username
+    
+
+
+class CustomPermission(BaseModel):
+    """
+    Name: CustomPermission
+
+    Description: This class help to create a custom permission.
+    
+    author: donald 
+    """ 
+    
+    class Meta:
+        
+        managed = False
+        
+        permissions = (
+            ('can_view_dashboard', 'Can view dashboard'),
+            ('can_analyse_data', 'Can analyse data'),
+            ('can_use_note_feature', 'Can use note feature'),    
+            
+        )        
     
     
     

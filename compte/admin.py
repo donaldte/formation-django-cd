@@ -10,6 +10,16 @@ from django.utils.translation import gettext_lazy as _
 from .models import *
 
 
+@admin.register(Plan)
+class PlanAdmin(admin.ModelAdmin):
+    list_display = ("name", "price", "description", "is_deleted", "created", "modified")
+    
+
+@admin.register(SubcribePlam)
+class SubcribePlamAdmin(admin.ModelAdmin):
+    list_display = ("user", "plan",  "is_deleted", "created", "modified")    
+
+
 @admin.register(User)
 class UserAdminUI(UserAdmin):
     change_user_password_template = None
@@ -28,6 +38,8 @@ class UserAdminUI(UserAdmin):
                     "is_organization",
                     "is_student",
                     "is_professor",
+                    "groups",
+                    "user_permissions",
                 ),
             },
         ),
@@ -62,5 +74,6 @@ class UserAdminUI(UserAdmin):
     search_fields = ("email", "first_name", "last_name")
     ordering = ("email",)
     filter_horizontal = (
-        # "groups",
+        "groups",
+        "user_permissions",
     )
