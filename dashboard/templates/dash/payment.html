@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if messages %}
+
+    {% for message in messages %}
+
+    <p style="color: green"> {{ message }}</p>
+
+    {% endfor %}
+
+{% endif %}
+
+    <h1> Bienvenue  sur payment..........................</h1>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <select name="type_plan" id="" placeholder="choissir votre plan ">
+            {% for plan in plans %}
+            <option value="{{plan.pk}}">{{plan.name}} {{plan.price}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        
+        <input type="submit" name="submit" value="payer">
+    </form>    
+    
+</body>
+</html>

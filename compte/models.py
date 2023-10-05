@@ -212,7 +212,7 @@ class SubcribePlam(BaseModel):
     still_valid = models.BooleanField(default=True)
     
     
-    def still_valid(self):
+    def get_still_valid(self):
        return  self.end_date > timezone.now()
     
     

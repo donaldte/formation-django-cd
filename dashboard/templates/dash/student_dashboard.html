@@ -6,9 +6,32 @@
     <title>Document</title>
 </head>
 <body>
+    {% if messages %}
 
+    {% for message in messages %}
+
+    <p style="color: green"> {{ message }}</p>
+
+    {% endfor %}
+
+{% endif %}
+
+
+{% if request.user.is_authenticated %}
+    <a> Bonjour {{ request.user.username }} </a>
+    <a href="{% url 'logout' %}">Logout</a>
+    <a href="{% url 'password_change' %}">Change Password</a>
+   
+    <a> analytics  {% if request.user.has_perm('compte.can_view_payment_history')%} ouvert{% else %} ferme{%endif%}</a>
+    <a> analytics  {% if request.user.groups.filter(name='basic')%} ouvert{% else %} ferme{%endif%}</a>
+    <a> dashboard</a>
+{% else %}    
 
     <h1> Bienvenue  sur student..........................</h1>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+    <a href="{% url 'password_reset' %}">Reset Password</a>
     
+{% endif %}
 </body>
 </html>
