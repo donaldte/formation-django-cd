@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'import_export',
     'django_extensions',
+    'bootstrap4',
 
 # my applications
     'main_app',
@@ -76,6 +77,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'easy_dea.wsgi.application'
+
 AUTH_USER_MODEL = 'compte.User'
 
 # Database
