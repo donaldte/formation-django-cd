@@ -1,14 +1,127 @@
 from django.test import RequestFactory, TestCase
 from django.contrib.auth.models import Group
 from unittest.mock import patch
-
+from .custom_forms import PlanForm2
 from django.test import Client
+from .models import Plan
+from django import forms
 
 from django.urls import reverse
 
 from .models import User
 
 from .views import signup_view
+
+
+
+class TestModelPlanTestCase(TestCase):
+    
+    """
+    Description: this class helps to test a Plan model table
+    """
+    
+    
+    def setUp(self):
+        
+        self.data = {
+            'name': 'premium',
+            'description': 'premium',
+            'price': 56
+        }
+        plan = Plan.objects.create(**self.data)
+        
+    
+        
+    def test_create_model(self):
+        
+        plan = Plan.objects.create(**self.data) 
+        
+        assert plan.name == 'premium'
+        assert plan.description == 'premium'
+        assert plan.price == 56
+        
+    def test_modify_model(self):
+        
+        plan = Plan.objects.get(name='premium')
+        
+        plan.name = 'Basic'
+        plan.save()
+        
+        assert plan.name == 'Basic' 
+        
+    def test_list_model(self):
+        
+        plan_count = Plan.objects.count()
+        
+        self.assertEqual(plan_count, 1)
+        
+    
+    # def test_delete_model(self):
+        
+        plan = Plan.objects.get(name='premium')
+        
+        plan.is_deleted = True
+        plan.save()
+        
+        plan_count = Plan.objects.filter(is_deleted=False).count()
+        
+        self.assertEqual(plan_count, 0)
+        
+
+
+class TestPlanForm2TestCase(TestCase):
+    
+    """
+    
+    Name: test plan form2
+    description: this class test helps to test a form
+    
+    """
+    
+    def setUp(self):
+        
+        self.data = {
+            'name': 'premium',
+            'description': 'premium',
+            'price': 200
+        }
+        self.form = PlanForm2
+        
+    
+    def test_valid_form(self):
+        
+        form = self.form(self.data) 
+        
+        self.assertTrue(form.is_valid())  
+        
+
+    def test_invalid_form_name(self):
+        self.data['name'] = ''
+        
+        form = self.form(self.data)
+        
+        self.assertFalse(form.is_valid())
+        
+    
+    def test_invalid_form_price(self):
+        
+        self.data['price'] = 'hello'  
+        
+        form = self.form(self.data)
+        
+        self.assertEqual(form.is_valid(), False) # equivalent to this:  assert form.is_valid() == False
+        
+        
+        
+        
+    def test_clean_name(self):
+        
+        self.data['name'] = 'abc'
+        
+        form = self.form(self.data)
+        
+        self.assertRaises(forms.ValidationError)
+        
 
 
 class TestAccountViewsTestCasse(TestCase):

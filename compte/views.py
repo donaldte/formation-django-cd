@@ -69,7 +69,7 @@ def signup_view(request):
     return render(request, 'signup.html')
 
 
-class RessetPassworLinkView(View):
+class ResetPassworLinkView(View):
     
     template_name = 'reset.html'
     
@@ -134,13 +134,16 @@ def password_reset_html(request):
             user = User.objects.get(pk=user_id)
             user.set_password(password1)
             user.save()
+            
+            # Clear the session data after successful password reset
+            del request.session['user_id']
+
             messages.success(request, "Your password has been reset successfully") 
             return redirect('compte:login')   
         else:
             messages.error(request, "the two password must match")
 
     return render(request, 'reset_password_form.html')
-
 
 def login_view(request):
     next = request.GET.get('next')

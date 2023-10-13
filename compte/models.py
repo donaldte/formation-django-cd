@@ -242,4 +242,16 @@ class CustomPermission(BaseModel):
         )        
     
     
-    
+"""
+
+search_query = request.GET.get('search')
+        
+        if search_query:
+            vector = SearchVector('name', 'description')
+            query = SearchQuery(search_query, config='english')
+            
+            products = Product.objects.annotate(
+                rank=SearchRank(vector, query)
+            ).filter(rank__gte=0.0001).order_by('-rank')
+
+"""    
