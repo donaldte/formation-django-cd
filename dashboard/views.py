@@ -4,6 +4,7 @@ from django.views import View
 from django.contrib import messages
 from compte.permissions import role_required, RoleRequiredMixin, GroupRequiredMixin, group_required
 from compte.models import Plan, SubcribePlam
+from .task import add
 
 class DashboardView(GroupRequiredMixin, View):
     group_required = ['basic', 'premium', 'New']
@@ -112,4 +113,25 @@ def payment(request, *args, **kwargs):
             messages.success(request, 'you have successfully subscribed to a plan')     
     return render(request, 'dash/payment.html', {'plans': plans})
 
+
+def my_task_view(request):
+    
+    result = add.delay(2, 3)
+    
+    print(result)
+
+    return render(request, 'dash/my_task.html', {'result': result})
+
+
+def my_task_result(request, task_id):
+
+    result = add.AsyncResult(task_id)
+    
+    if result.ready():
+
+        return render(request, 'dash/my_task_result.html', {'result': result.result})
+    
+    else:
+        return render(request, 'dash/my_task_result.html', {'result': 'task is not ready still running'})
+    
 

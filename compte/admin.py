@@ -77,3 +77,8 @@ class UserAdminUI(UserAdmin):
         "groups",
         "user_permissions",
     )
+    
+    
+@admin.register(Payment)
+class PaymentAdmin(admin.ModelAdmin):
+    list_display = ("sender", "receiver", "is_deleted", "created")    

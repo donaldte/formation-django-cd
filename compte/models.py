@@ -9,6 +9,9 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django_extensions.db.models import TimeStampedModel, ActivatorModel
 
+from django.db.models.signals import post_save, pre_save, pre_delete, post_delete, m2m_changed
+from django.dispatch import receiver
+
 from .manager import *
 
 logger = logging.getLogger(__name__)
@@ -254,4 +257,44 @@ search_query = request.GET.get('search')
                 rank=SearchRank(vector, query)
             ).filter(rank__gte=0.0001).order_by('-rank')
 
-"""    
+"""   
+
+class Payment(BaseModel):
+    
+    sender = models.CharField(max_length=100, null=False, blank=False)
+    receiver = models.CharField(max_length=100, null=False, blank=False)
+    payment_mode = models.CharField(max_length=100, null=False, blank=False)
+    amount = models.FloatField(null=False, blank=False) 
+    
+    def __str__(self):
+        return str(self.sender)
+    
+    
+# SubcribePlam 
+# Payment 
+
+@receiver(post_save, sender=SubcribePlam)   
+def create_payment(sender, instance, created, **kwargs):
+    if created:
+        Payment.objects.create(
+            sender=instance.user.username,
+            receiver="DEA",
+            amount=instance.plan.price,
+            payment_mode=instance.payment_mode
+        )
+        
+# @receiver(m2m_changed, sender=SubcribePlam.nom_champ_m2m)   
+# def create_payment(sender, instance, created, **kwargs):
+#     if created:
+#         Payment.objects.create(
+#             sender=instance.user.username,
+#             receiver="DEA",
+#             amount=instance.plan.price,
+#             payment_mode=instance.payment_mode
+#         )        
+        
+ 
+"""
+taches en arriere plan : django q, django celery
+serveur de taches : redis, rabbitmq, 
+"""        
