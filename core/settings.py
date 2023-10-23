@@ -11,17 +11,21 @@ from django.utils.translation import gettext_lazy as _
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# GENERATE NEW SECRET KEY
+
+from django.core.management.utils import get_random_secret_key
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-h3ee^9ye_&k#emt(z0c0s63ourwpf%bm9hw06ck@4hbapzwoql'
+
+SECRET_KEY=get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(",")
 
 
 # Application definition
@@ -101,17 +105,6 @@ EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
 
 LOGIN_URL = 'compte:login'
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': config('DB_NAME'),
-#         'USER': config('DB_USER'),
-#         'PASSWORD': config('DB_PASSWORD'),
-#         'HOST': config('DB_HOST'),
-#         'PORT': config('DB_PORT'),
-#     }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -149,7 +142,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "collected_statics")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
@@ -182,4 +175,25 @@ SITE = {
     "twitter_url": "#",
     "facebook_url": "https://www.facebook.com/VoeLwt.org/",
     "youtube_url": "#",
+}
+
+
+# Configurer le niveau de journalisation pour WhiteNoise
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',  # Changer le niveau en fonction de vos besoins (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+    },
+    'whitenoise': {
+        'handlers': ['console'],
+        'level': 'DEBUG',  # Changer le niveau en fonction de vos besoins
+    },
 }

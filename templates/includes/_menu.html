@@ -18,8 +18,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <!-- <li><a class="nav-link scrollto active" href="#hero">Acceuil</a> -->
-          <li><a class="nav-link scrollto" href="{% url 'home' %}"> {% trans 'Home' %}</a>          </li>
-          <li><a class="nav-link scrollto" href="{% url 'services' %}">{% trans 'Services' %}</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'main_app:home' %}"> {% trans 'Home' %}</a>          </li>
+          <li><a class="nav-link scrollto" href="{% url 'main_app:services' %}">{% trans 'Services' %}</a></li>
           <li class="dropdown"><a href="model.html"><span>{% trans 'Models' %}</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               
@@ -155,7 +155,7 @@
             </li> 
             <li><a class="nav-link scrollto" href="">{% trans 'Price' %}</a></li>
             <li><a class="nav-link scrollto" href="">{% trans 'News' %}</a></li>
-            <li><a class="nav-link scrollto" href="{% url 'contact-us' %}">{% trans 'Contact' %}</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'main_app:contact-us' %}">{% trans 'Contact' %}</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

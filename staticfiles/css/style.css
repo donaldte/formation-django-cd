@@ -523,7 +523,7 @@ h6 {
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
-  overflow: hidden;
+ overflow: hidden;
 }
 
 .section-title {
@@ -613,6 +613,11 @@ section {
   transition: all ease-in-out 0.3s;
 }
 
+.why-us .box:hover {
+  background: #cc1616;
+  /*background: rgba(243,189,0,1);*/
+}
+
 .why-us .box span {
   display: block;
   font-size: 28px;
@@ -664,6 +669,12 @@ section {
   transition: all 0.4s ease-in-out;
   display: inline-block;
   padding: 15px 0;
+}
+
+.clients h3 {
+  color: rgba(4, 26, 48, 0.95);
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .clients img:hover {
@@ -760,7 +771,8 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
+  /*background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;*/
+  background: linear-gradient(rgba(4, 26, 48, 0.5), rgba(4, 26, 48, 0.95)), url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
   padding: 120px 0;
 }
@@ -1145,6 +1157,7 @@ section {
 --------------------------------------------------------------*/
 .contact .info-box {
   color: #444444;
+  color: rgba(4, 26, 48, 1.0);
   text-align: center;
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 20px 0 30px 0;
