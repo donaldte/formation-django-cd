@@ -10,7 +10,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "whitenoise.runserver_nostatic",
+    "whitenoise.runserver_nostatic", # SERVE  STATICFILE WITH WHITENOISE THIS THE FIRST METHOD TO SERVE STATIC FILE YOU CAN USE NGINX OR APACHE
 
     
 # third party applications
