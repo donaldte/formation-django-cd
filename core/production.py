@@ -43,3 +43,6 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DATABASES = {
         'default': dj_database_url.parse(config('DATABASE_URL'))
     }
+
+CELERY_BROKER_URL = 'redis://red-ckcmr36smu8c73djkrt0:6379'
+CELERY_RESULT_BACKEND = 'redis://red-ckcmr36smu8c73djkrt0:6379'
